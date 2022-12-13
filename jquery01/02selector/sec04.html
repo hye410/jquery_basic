@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>선택자4</title>
+<script src="../../js/jquery-3.6.1.min.js"></script>
+</head>
+<body>
+<H2>title</H2>
+<p><button id="btn_01">Click Me</button></p>
+<ul>
+<li id="first" title="a1a"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+<li class="second" title="bb"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+<li id="third" title="cerc"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+<li class="fourth" title="ded"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+</ul>
+<script>
+  $(function(){
+    $('#btn_01').click(function(e){
+      $('[title="a1a"]').css('color','red');
+      $('[title^="a"]').css('background-color','yellow');
+      $('[title$="a"]').css('border','2px solid green');
+      $('[title*="1"]').css('font-size','30px');
+      $('li[title!="a1a"]').css('background-color','orange')
+      $('[class]').css('color','blue')
+    })
+  })
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
