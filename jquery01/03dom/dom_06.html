@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>속성변화</title>
+<script src="../../js/jquery-3.6.1.min.js"></script>
 <style>
 section{width:500px; margin:25px auto; text-align:center;}
 div{display:none;}
@@ -17,7 +18,20 @@ div{display:none;}
 	<img src="images/pic1.jpg" alt="sample"></p>
 <p class="test">1</p>
 </section>
-
+<script>
+	$(function(){
+		let i = 1;
+		$('#btn01').click(function(e){
+			++ i;
+			if(i > 7){
+				i =  1
+			}
+			let src = 'images/pic'+i+'.jpg'
+			$('.box01>img').attr('src',src);
+			$('.test').text(i);
+		})
+	})
+</script>
 </body>
 </html>
 

@@ -3,6 +3,7 @@
 <meta charset="UTF-8">
 
 <title>this와 토글</title>
+<script src="../../js/jquery-3.6.1.min.js"></script>
 <style>
 p { margin: 4px; font-size:16px; font-weight:bolder;
 cursor:pointer; }
@@ -17,5 +18,14 @@ cursor:pointer; }
 <p class="blue highlight">highlight</p>
 <p class="blue">on these</p>
 <p class="blue">paragraphs</p>
+
+<script>
+  // 내가 클릭한 p만 클래스가 자동으로 add,remove됨 
+  $(function(){
+    $('p').click(function(e){
+      $(this).toggleClass('highlight')
+    })
+  })
+</script>
 </body>
 </html>

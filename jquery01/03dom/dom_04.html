@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>속성변화</title>
-
+<script src="../../js/jquery-3.6.1.min.js"></script>
 <link href="css/reset.css" rel="stylesheet">
 <style>
 section{width:378px; margin:20px auto; border:1px solid #666;}
@@ -32,9 +32,20 @@ section div.box01{border:5px solid #F30; padding:3px; background-color:#FF0;}
 <div class="box03">
 	<p><img src="images/img03.png" alt="이미지03"></p>
 </div>
-
-
 </div>
 </section>
+
+<script>
+$(function(){
+	$('#btn01').click(function(e){
+		const str = $('.box01').css('border')
+		$('.box02').css('border',str)
+	});
+	$('#btn02').click(function(e){
+		const str = $('.box01').css('background-color')
+		$('.box03').css('background-color',str)
+	})
+})
+</script>
 </body>
 </html>

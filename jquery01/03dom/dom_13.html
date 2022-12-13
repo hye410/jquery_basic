@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>바꾸기</title>
-
+<script src="../../js/jquery-3.6.1.min.js"></script>
 </head>
 <body>
 <button id="btn01">replace</button>
@@ -19,5 +19,30 @@
 <p class="no05">채우기 </p>
 <p class="no06">복제하기</p>
 <p class="no07">자르기</p>
+
+<script>
+$(function(){
+  $('#btn01').click(function(e){
+    $('.no01').replaceWith('<h1>Welcome</h1>')
+  })
+  $('#btn02').click(function(e){
+    $('.no02').html('<em>변경</em>')
+  })
+  $('#btn03').click(function(e){
+    $('.no03').remove();
+  })
+  $('#btn04').click(function(e){
+    $('.no04').empty()
+  })
+  $('#btn05').click(function(e){
+    let str = $('.no06').clone()
+    $('.no05').prepend(str)
+  })
+  $('#btn06').click(function(e){
+    let str = $('.no07').detach()
+    $('.no05').append(str)
+  })
+})
+</script>
 </body>
 </html>

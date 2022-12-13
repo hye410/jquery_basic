@@ -3,12 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <title>2.Dom</title>
-
+<script src="../../js/jquery-3.6.1.min.js"></script>
 <style>
 ul{display:none;}
 </style>
-<
-
 </head>
 <body>
 <button id="btn01">요소 변경</button>
@@ -21,5 +19,17 @@ ul{display:none;}
 <li><img src="images/pic_04.jpg" alt="sample01"></li>
 <li><img src="images/pic_03.jpg" alt="sample01"></li>
 </ul>
+<script>
+  $(function(){
+    $('#btn01').click(function(e){
+      $('#first').html('<strong>변경되었습니다.</strong>')
+    });
+    $('#btn02').click(function(e){
+      const pic = $('ul>li:first-child').html()
+      // console.log(pic)
+      $('#second').html(pic)
+    })
+  })
+</script>
 </body>
 </html>

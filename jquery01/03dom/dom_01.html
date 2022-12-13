@@ -2,7 +2,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>2.Dom</title>	
+<title>2.Dom</title>
+<script src="../../js/jquery-3.6.1.min.js"></script>
 
 <style>
 ul{display:none;}
@@ -20,5 +21,20 @@ ul{display:none;}
 <li>오후1시 classA에서 시작합니다.</li>
 <li>오후 8시 classB에서 시작합니다.</li>
 </ul>
+<script>
+  $(function(){
+  $('#btn01').click(function(e){
+    $('#first').text('변경되었습니다.')
+  });
+  $('#btn02').click(function(e){
+    const str = $('li:first-child').text()
+    $('#second').text(str)
+  })
+  $('#btn03').click(function(e){
+    const str = $('li:last-child').text()
+    $('#second').text(str)
+  })
+})
+</script>
 </body>
 </html>
