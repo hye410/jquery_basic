@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>sample</title>
 <link rel="stylesheet" href="css/style.css">
-
+<script src="../../js/jquery-3.6.1.min.js"></script>
 </head>
 <body>
 <!--큰이미지-->
@@ -30,5 +30,21 @@
 <img src="pic/flw_05.jpg" width="175px" ></a></li>
 </ul></div></div>
 </div>
+<script>
+  $(function(){
+    $('ul>li>a>img').on('click',function(e){
+      let pic = $(this).attr('src')
+      // console.log(pic)
+      $('#bigImage>img').attr('src',pic)
+      return false;
+    });
+    $('#prev').on('click',function(e){
+      $('ul>li:last-child').prependTo('ul')
+    })
+    $('#next').on('click',function(e){
+      $('ul>li:first-child').appendTo('ul')
+    })
+  })
+</script>
 </body>
 </html>

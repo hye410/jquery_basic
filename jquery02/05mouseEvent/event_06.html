@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>on,one,off사용하기</title>
+<script src="../../js/jquery-3.6.1.min.js"></script>
 <style>
 </style>
 </head>
@@ -10,5 +11,13 @@
 <body>
 <button>화면을 변경</button>
 <div></div>
+<script>
+  $(function(){
+    $('button').one('click',function(e){
+      console.log('click')
+    })
+    //on을 했을 때는 클릭누르면 콘솔에 계속 클릭이 출력되지만, one이라서 딱 한번만 출력됨
+  })
+</script>
 </body>
 </html>

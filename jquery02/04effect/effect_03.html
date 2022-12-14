@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>easing 사용하기</title>
+<script src="../../js/jquery-3.6.1.min.js"></script>
+<script src="../../js/jquery-ui.min.js"></script>
 <style type="text/css">
 div{
 width:300px;
@@ -15,5 +17,12 @@ display:none;
 <body>
 	<button id="btnAll">표시・비표시</button>
 	<div id="backImg"></div>
+	<script>
+		$(function(){
+			$('#btnAll').click(function(e){
+				$('#backImg').slideToggle(2000,'easeInOutBounce')
+			})
+		})
+	</script>
 </body>
 </html>

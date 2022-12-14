@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>움직이지 않는 객체</title>
+<script src="../../js/jquery-3.6.1.min.js"></script>
 <!--움직이지 않는 객체만 선택하기-->
 <style type="text/css">
 div{
@@ -19,7 +20,16 @@ display:none;
 	<div id="back_01">some forms of augmented reality can now be used in our daily lives 2.contact lenses that give GPS directions have not been created yet 3.augmented reality might be used as a tool for exposing an individual`s information.some forms of augmented reality can now be used in our daily lives 2.contact lenses that give GPS directions have not been created yet 3.augmented reality might be used as a tool for exposing an individual`s information.</div>
 	<p></p>
  
-    
+	<script>
+		$(function(){
+			$('#show').click(function(e){
+				$('#back_01:not(:animated)').slideDown(3500)
+			})
+			$('#hide').click(function(e){
+				$('#back_01:not(:animated)').slideUp(3500)
+			})
+		})
+	</script>
 </body>
 </html>
 

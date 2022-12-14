@@ -7,9 +7,8 @@
 p{width:150px; height:150px; background:red;
 	position:absolute; top:100px; left:100px;}
 </style>
-<script src="../js/jquery-1.11.3.min.js"></script>
-<script src="../js/jquery-migrate-1.2.1.min.js"></script>
-<script src="../js/jquery-ui.min.js"></script>
+<script src="../../js/jquery-3.6.1.min.js"></script>
+<script src="../../js/jquery-ui.min.js"></script>
 </head> 
 
 <body>
@@ -17,8 +16,20 @@ p{width:150px; height:150px; background:red;
 <button id="btn01">300go</button>
 <button id="btn02">color</button>
 <p></p>
+<script>
+$(function(){
+	$('#btn').click(function(e){
+		$('p').animate({left : '300px'})
+	})
+	$('#btn01').click(function(e){
+		$('p').animate({left : '+=100px'},1000)
+	})
+	$('#btn02').click(function(e){
+		$('p').animate({backgroundColor:'yellow'},1000)
+	})
+	})
 
-
+</script>
 </body>
 </html>
 

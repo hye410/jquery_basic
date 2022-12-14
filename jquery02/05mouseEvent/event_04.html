@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>event:더블클릭, mouseDown,MouseUp</title>
-
+<script src="../../js/jquery-3.6.1.min.js"></script>
 </head>
 <body>
 <ul id="list_btn">
@@ -13,5 +13,29 @@
 <li><a href="img/room_04.jpg">room04</a></li>
 </ul>
 <p id="back_pic"><img src="img/room_05.jpg" alt="room05" /></p>
+<script>
+  //내가 푼 거
+  // $(function(){
+  //   $('li>a').on('click',function(e){
+  //     return false;
+  //   }) //a의 클릭 기능을 먼저 지워야 더블클릭으로 넘어갈 수 있겠지?!
+  //   $('li>a').on('dblclick',function(e){
+  //     let pic = $(this).attr('href')
+  //     $('p>img').attr('src',pic)
+  //   })
+  // })
+
+  //풀이
+  $(function(){
+    $('li>a').on('dblclick',function(e){
+      let pic = $(this).attr('href')
+      $('p>img').attr('src',pic)
+    }).on('click',function(e){
+      return false;
+    })
+  })
+  //어쨌든 더블클릭이 들어가기 전에 클릭이 먼저 들어감,, 더블클릭뿐만아니라 마우스다운,업도 마찬가지
+
+</script>
 </body>
 </html> 

@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>effect기본매서드 외우기</title>
+<script src="../../js/jquery-3.6.1.min.js"></script>
 <style>
 p{margin:0; padding:0;}
 div{width:800px; height:70px; margin:0 auto 25px; overflow:hidden;}
@@ -48,16 +49,43 @@ p:last-child{width:480px; height:66px; background:#099; float:right; }
 <p class="back04"></p>
 </div>
 
+<script>
+  $(function(){
+    $('#effect01 .btn01').click(function(e){
+      $(this).parent().siblings().show(1000)
+    })
+    $('#effect01 .btn02').click(function(e){
+      //$('#effect01 .back01').hide(1000);
+      $(this).parent().siblings().hide(1000)
+    })
+    $('#effect01 .btn03').click(function(e){
+      $(this).parent().siblings().toggle(1000)
+    });
+    
+    $('#effect02 .btn01').click(function(e){
+      $(this).parent().siblings().slideUp(1000)
+    })
+    $('#effect02 .btn02').click(function(e){
+      $(this).parent().siblings().slideDown(1000,'linear')
+    })
+    $('#effect02 .btn03').click(function(e){
+      $(this).parent().siblings().slideToggle()
+    })
 
+    $('#effect03 .btn01').click(function(e){
+      $(this).parent().siblings().fadeIn()
+    })
+    $('#effect03 .btn02').click(function(e){
+      $(this).parent().siblings().fadeOut()
+    })
 
-
-
-
-
-
-
-
-
-
+    $('#effect04 .btn01').click(function(e){
+      $(this).parent().siblings().fadeTo(500,0.4)
+    })
+    $('#effect04 .btn02').click(function(e){
+      $(this).parent().siblings().fadeToggle()
+    })
+  })
+</script>
 </body>
 </html>

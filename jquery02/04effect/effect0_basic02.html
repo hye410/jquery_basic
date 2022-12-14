@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>animate_basic</title>
+<script src="../../js/jquery-3.6.1.min.js"></script>
 <!--animate-->
 <style>
 p{width:150px; height:150px; background-color:#F00;
@@ -13,7 +14,13 @@ p{width:150px; height:150px; background-color:#F00;
 <body>
 <button>run</button>
 <p></p>
-
+<script>
+	$(function(){
+		$('button').click(function(e){
+			$('p').animate({left:'300px'},1000)
+		})
+	})
+</script>
 </body>
 </html>
 

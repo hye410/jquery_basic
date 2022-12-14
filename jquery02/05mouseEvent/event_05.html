@@ -1,5 +1,7 @@
 <html>
 <head>
+  <title>click or double click</title>
+  <script src="../../js/jquery-3.6.1.min.js"></script>
   <style>
 p { background:yellow; font-weight:bold; cursor:pointer;
 padding:5px; }
@@ -12,5 +14,11 @@ span { color:red; }
   <p>Click or double click here.</p>
 <span></span>
  
+<script>
+  $('p').on('click',function(e){
+    console.log('click')
+  });
+  $('p').off('click')
+</script>
 </body>
 </html>
