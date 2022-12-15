@@ -17,7 +17,7 @@
   <p id="prev"><img src="pic/prev.png" width="23" height="23"></p>
   <p id="next"><img src="pic/next.png" width="23" height="23"></p>
   <div id="show_view">
-<ul>
+<ul>  
 <li><a class="smallImage" href="pic/flw_01.jpg">
 <img src="pic/flw_01.jpg" width="175px" ></a></li>
 <li><a class="smallImage"  href="pic/flw_02.jpg">
@@ -32,8 +32,8 @@
 </div>
 <script>
   $(function(){
-    $('ul>li>a>img').on('click',function(e){
-      let pic = $(this).attr('src')
+    $('ul>li>a').on('click',function(e){
+      let pic = $(this).attr('href')
       // console.log(pic)
       $('#bigImage>img').attr('src',pic)
       return false;

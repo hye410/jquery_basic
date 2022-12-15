@@ -15,13 +15,20 @@
 <p><img src="img/flower.jpg" alt=" 꽃" /></p>
 <script>
   $(function(){
-    $('ul>li>a').on('click',function(e){
+    //img 변경 : 이벤트 -> 추가분이 있을 경우 영역으로 등록.
+    // $('ul>li>a').on('click',function(e){
+    //   let pic = $(this).attr('href')
+    //   $('p>img').attr('src',pic)
+    //   return false;
+    // })
+    $('ul').on('click','li>a',function(e){
       let pic = $(this).attr('href')
       $('p>img').attr('src',pic)
       return false;
     })
+    //요소 추가분
     $('button').on('click',function(e){
-      $('ul').append('<li><a href="img/building.jpg">빌딩</a></li>')
+      $('ul').append('<li><a href="./img/building.jpg">빌딩</a></li>');
     })
   })
 </script>

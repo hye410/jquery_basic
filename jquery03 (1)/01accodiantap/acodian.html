@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>아코디언가로</title>
+
+<link href="css/reset.css" rel="stylesheet">
+<link href="css/acodian02.css" rel="stylesheet">
+<script src="../../js/jquery-3.6.1.min.js"></script>
+
+</head>
+<body>
+<div>
+<dl>
+<dt id="pane1"><span>1</span></dt>
+<dd><p>Coral reefs are amongst the most productive areas of the ocean. Each coral contains microscopic algae within its tissue that are able to capture the energy of the Sun and convert it into food. The corals benefit from this, and this helps support a whole community of life. There’s a tight recycling of nutrients through the food web, every species being food for another, all interconnected like a jigsaw puzzle.
+<dt id="pane2"><span>2</span></dt>
+<dd><p>Coral reefs are amongst the most productive areas of the ocean. Each coral contains microscopic algae within its tissue that are able to capture the energy of the Sun and convert it into food. The corals benefit from this, and this helps support a whole community of life. There’s a tight recycling of nutrients through the food web, every species being food for another, all interconnected like a jigsaw puzzle.</p></dd>
+<dt id="pane3"><span>3</span></dt>
+<dd><p>Coral reefs are amongst the most productive areas of the ocean. Each coral contains microscopic algae within its tissue that are able to capture the energy of the Sun and convert it into food. The corals benefit from this, and this helps support a whole community of life. There’s a tight recycling of nutrients through the food web, every species being food for another, all interconnected like a jigsaw puzzle.</p></dd>
+</dl>
+</div>
+<script type="text/javascript">
+$(function(){
+  //준비하기
+  $('dl>dt:first').addClass('selected')
+  $('dl>dd:not(:first)').css('width','0')
+  // $('dl>dd:not(:first)').width(0)
+  
+  $('dl>dt').on('click',function(e){
+    let str = $(this).next().css('width')
+    //console.log(str)
+    if(str === '0px'){
+    $('.selected').next().animate({width:'0px'})
+    $(this).next().animate({width:'500px'})
+    $('dl>dt').removeClass('selected')
+    $(this).addClass('selected')
+  }
+  })
+})
+</script>
+</body>
+</html>

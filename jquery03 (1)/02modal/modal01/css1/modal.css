@@ -1,0 +1,25 @@
+@charset "UTF-8";
+/* CSS Document */
+
+ul{width:700px; }
+ul li{float:left; margin:10px;}
+
+/*추가하기*/
+
+div#main{
+  /* position : fixed;
+  left : 50%;
+  top : 50%;
+  /* margin-left : -200px;
+  margin-top : -150px; */
+  /* z-index: 200; */ */
+}
+
+div#back{
+  /* position:fixed;
+  width : 100%;
+  height: 100%; */
+  /* background-color: skyblue;
+  z-index: 100; */
+}
+
